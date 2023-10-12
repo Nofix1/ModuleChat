@@ -3,7 +3,7 @@
 # ( o.o )  🔐 Licensed under the GNU AGPLv3.
 #  > ^ <   ⚠️ Owner of heta.hikariatama.ru doesn't take any responsibilities or intellectual property rights regarding this script
 # ---------------------------------------------------------------------------------
-# Name: lolicon
+# Name: loliconRP
 # Author: @AHIMETYAHKA
 # Commands:
 # .rp      | .rptoggle | .rplist | .rpbackup | .rprestore
@@ -13,7 +13,7 @@
 # scope: hikka_min 1.2.10
 
 # meta pic: https://img.icons8.com/color/480/000000/comedy.png
-# meta banner: https://mods.hikariatama.ru/badges/rpmod.jpg
+# meta banner: https://mods.hikariatama.ru/badges/LoliconRPod.jpg
 # meta developer: @AHIMETYAHKA
 
 import io
@@ -27,36 +27,36 @@ from .. import loader, utils
 
 
 @loader.tds
-class RPMod(loader.Module):
-    """RPMod by AHIMETYAHKA"""
+class LoliconRPod(loader.Module):
+    """LoliconRPod by AHIMETYAHKA"""
 
     strings = {
-        "name": "RPMod",
-        "args": "🚫 <b>Incorrect args</b>",
-        "success": "✅ <b>Success</b>",
-        "rp_on": "✅ <b>RPM on</b>",
-        "rp_off": "✅ <b>RPM off</b>",
-        "rplist": "🦊 <b>Current RP commands</b>\n\n{}",
+        "name": "loliconRP",
+        "args": "❌ <b>Incorrect args</b>",
+        "success": "✔️ <b>Success</b>",
+        "rp_on": "✔️ <b>LoliconRP on</b>",
+        "rp_off": "✔️ <b>LoliconRP off</b>",
+        "rplist": "🥵 <b>Current RP commands</b>\n\n{}",
         "backup_caption": (
-            "🦊 <b>My RP commands. Restore with </b><code>.rprestore</code>"
+            "🥵 <b>My RP commands. Restore with </b><code>.rprestore</code>"
         ),
-        "no_file": "🚫 <b>Reply to file</b>",
-        "restored": "✅ <b>RP Commands restored. See them with </b><code>.rplist</code>",
+        "no_file": "❌ <b>Reply to file</b>",
+        "restored": "✔️ <b>RP Commands restored. See them with </b><code>.rplist</code>",
     }
 
     strings_ru = {
-        "args": "🚫 <b>Неверные аргументы</b>",
-        "success": "✅ <b>Успешно</b>",
-        "rp_on": "✅ <b>RPM включен</b>",
-        "rp_off": "✅ <b>RPM выключен</b>",
-        "rplist": "🦊 <b>Текущие RP команды</b>\n\n{}",
+        "args": "❌ <b>Неверные аргументы</b>",
+        "success": "✔️ <b>Успешно</b>",
+        "rp_on": "✔️ <b>LoliconRP включен</b>",
+        "rp_off": "✔️ <b>LoliconRP выключен</b>",
+        "rplist": "🥵 <b>Текущие RP команды</b>\n\n{}",
         "backup_caption": (
-            "🦊 <b>Мои RP команды. Ты можешь восстановить их используя"
+            "🥵 <b>Мои RP команды. Ты можешь восстановить их используя"
             " </b><code>.rprestore</code>"
         ),
-        "no_file": "🚫 <b>Ответь на файл</b>",
+        "no_file": "❌ <b>Ответь на файл</b>",
         "restored": (
-            "✅ <b>RP команды восстановлены. Их можно посмотреть используя"
+            "✔️ <b>RP команды восстановлены. Их можно посмотреть используя"
             " </b><code>.rplist</code>"
         ),
         "_cmd_doc_rp": (
@@ -68,7 +68,7 @@ class RPMod(loader.Module):
         "_cmd_doc_rpbackup": "Сохранить RP команды в файл",
         "_cmd_doc_rprestore": "Восстановить RP команды из файла",
         "_cmd_doc_rpchats": "Показать чаты, где активен режим RP",
-        "_cls_doc": "RPMod от лоликонщика",
+        "_cls_doc": "LoliconRP от лоликонщика",
     }
 
     async def client_ready(self, client, db):
@@ -161,10 +161,10 @@ class RPMod(loader.Module):
         await utils.answer(message, self.strings("restored"))
 
     async def rpchatscmd(self, message: Message):
-        """List chats, where RPM is active"""
+        """List chats, where LoliconRP is active"""
         await utils.answer(
             message,
-            f"🦊 <b>RPM is active in {len(self.chats)} chats:</b>\n\n"
+            f"🥵 <b>LoliconRP is active in {len(self.chats)} chats:</b>\n\n"
             + "\n".join(
                 [
                     "    🇯🇵"
@@ -223,7 +223,7 @@ class RPMod(loader.Module):
             emoji = msg[0]
             msg = "".join(msg[1:])
         else:
-            emoji = "🦊"
+            emoji = "🥵"
 
         await utils.answer(
             message,
