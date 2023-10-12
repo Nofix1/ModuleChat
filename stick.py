@@ -2,10 +2,10 @@
 # Name: loliconscript
 # Author:@AHIMETYAHKA
 # Commands:
-# .st
+# .aniq
 # ---------------------------------------------------------------------------------
-# meta pic: https://static.hikari.gay/tcuotes_icon.png
-# meta banner: https://mods.hikariatama.ru/badges/tcuotes.jpg
+# meta pic: https://static.hikari.gay/aniquotes_icon.png
+# meta banner: https://mods.hikariatama.ru/badges/aniquotes.jpg
 # meta developer: @AHIMETYAHKA
 # scope: hikka_only
 # scope: hikka_min 1.2.10
@@ -40,7 +40,7 @@ class AnimatedQuotesMod(loader.Module):
         "processing": (
             "<emoji document_id=5451646226975955576>⌛️</emoji> <b>Обработка...</b>"
         ),
-        "_cmd_doc_tc": "<text> - Создать анимированный стикер",
+        "_cmd_doc_aniq": "<text> - Создать анимированный стикер",
         "_cls_doc": "Просто Ебашит Стикеры",
     }
 
@@ -52,7 +52,7 @@ class AnimatedQuotesMod(loader.Module):
         "processing": (
             "<emoji document_id=5451646226975955576>⌛️</emoji> <b>Verarbeitung...</b>"
         ),
-        "_cmd_doc_tc": "<text> - Erstelle einen animierten Sticker",
+        "_cmd_doc_aniq": "<text> - Erstelle einen animierten Sticker",
         "_cls_doc": "Einfaches Modul, das animierte Sticker erstellt",
     }
 
@@ -64,7 +64,7 @@ class AnimatedQuotesMod(loader.Module):
         "processing": (
             "<emoji document_id=5451646226975955576>⌛️</emoji> <b>प्रोसेसिंग...</b>"
         ),
-        "_cmd_doc_tc": "<text> - एक एनीमेटेड स्टिकर बनाएं",
+        "_cmd_doc_aniq": "<text> - एक एनीमेटेड स्टिकर बनाएं",
         "_cls_doc": "एक एनीमेटेड स्टिकर बनाने के लिए एक सरल मॉड्यूल",
     }
 
@@ -77,7 +77,7 @@ class AnimatedQuotesMod(loader.Module):
         "processing": (
             "<emoji document_id=5451646226975955576>⌛️</emoji> <b>Islenmoqda...</b>"
         ),
-        "_cmd_doc_tc": "<matn> - Animatsiya stikerni yaratish",
+        "_cmd_doc_aniq": "<matn> - Animatsiya stikerni yaratish",
         "_cls_doc": "Animatsiya stikerni yaratish uchun oddiy modul",
     }
 
@@ -88,11 +88,11 @@ class AnimatedQuotesMod(loader.Module):
         "processing": (
             "<emoji document_id=5451646226975955576>⌛️</emoji> <b>İşleniyor...</b>"
         ),
-        "_cmd_doc_tc": "<text> - Animasyonlu alıntı oluştur",
+        "_cmd_doc_aniq": "<text> - Animasyonlu alıntı oluştur",
         "_cls_doc": "Animasyonlu stiker oluşturmak için basit bir modül",
     }
 
-    async def tccmd(self, message: Message):
+    async def aniqcmd(self, message: Message):
         """<text> - Create animated quote"""
         args = utils.get_args_raw(message)
         if not args:
