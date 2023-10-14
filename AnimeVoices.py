@@ -330,6 +330,7 @@ class AnimeVoicesMod(loader.Module):
             reply_to=reply.id if reply else None,
         )
         return
+        
       async def berscmd(self, message):
         """Berserk"""
 
