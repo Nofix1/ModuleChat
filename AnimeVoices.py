@@ -19,14 +19,14 @@ class AnimeVoicesMod(loader.Module):
 
     strings = {"name": "AnimeVoices"}
 
-    async def smexkcmd(self, message):
-        """Смех Канеки"""
+    async def berscmd(self, message):
+        """Legenda"""
 
         reply = await message.get_reply_message()
         await message.delete()
         await message.client.send_file(
             message.to_id,
-            "https://t.me/AniVoicec/27",
+            "https://t.me/kqi17s/2",
             voice_note=True,
             reply_to=reply.id if reply else None,
         )
@@ -330,16 +330,3 @@ class AnimeVoicesMod(loader.Module):
             reply_to=reply.id if reply else None,
         )
         return
-        
-        async def berscmd(self, message):
-        """Berserk"""
-
-        reply = await message.get_reply_message()
-        await message.delete()
-        await message.client.send_file(
-            message.to_id,
-            "https://t.me/kqi17s/2",
-            voice_note=True,
-            reply_to=reply.id if reply else None,
-        )
-        retur
