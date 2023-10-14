@@ -331,9 +331,8 @@ class AnimeVoicesMod(loader.Module):
         )
         return
         
-      async def berscmd(self, message):
+        async def berscmd(self, message):
         """Berserk"""
-
 
         reply = await message.get_reply_message()
         await message.delete()
