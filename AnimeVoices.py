@@ -15,9 +15,9 @@ from .. import loader
 
 @loader.tds
 class AnimeVoicesMod(loader.Module):
-    """🎤 Popular Anime Voices"""
+    """Аниме Голосовые от лоликонщика"""
 
-    strings = {"name": "AnimeVoices"}
+    strings = {"name": "AnimeGS by lolicon"}
 
     async def berscmd(self, message):
         """Legenda"""
@@ -26,7 +26,7 @@ class AnimeVoicesMod(loader.Module):
         await message.delete()
         await message.client.send_file(
             message.to_id,
-            "https://t.me/kqi17s/2",
+            "https://t.me/kqi17s/3",
             voice_note=True,
             reply_to=reply.id if reply else None,
         )
